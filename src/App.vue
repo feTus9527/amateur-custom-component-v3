@@ -22,6 +22,7 @@
 <style lang="scss" scoped>
 .title {
   font-weight: 200;
+  height: 40px;
 }
 .content-container {
   display: flex;
@@ -41,6 +42,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 160px);
   }
 }
 
