@@ -25,7 +25,6 @@
 }
 .content-container {
   display: flex;
-  gap: 1rem;
 
   .nav {
     display: flex;

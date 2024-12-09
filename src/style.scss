@@ -2,6 +2,7 @@ body {
   margin: 0;
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 #app {
@@ -14,14 +15,14 @@ body {
 .row {
   width: 1000px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin: 20px auto;
 }
 
 .row-title {
   text-align: left;
-  width: 900px;
+  width: 1100px;
   margin: 10px auto;
   font-weight: 200;
   user-select: none;
