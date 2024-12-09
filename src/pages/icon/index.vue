@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import FeIcon from "@/components/icon/index.vue";
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <h1 class="row-title">General Usage</h1>
