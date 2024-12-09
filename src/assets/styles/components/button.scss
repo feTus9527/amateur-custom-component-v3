@@ -1,0 +1,132 @@
+.fe-button {
+  --fe-button-font-weight: var(--fe-font-weight-primary);
+  --fe-button-border-color: var(--fe-border-color);
+  --fe-button-bg-color: var(--fe-fill-color-blank);
+  --fe-button-text-color: var(--fe-text-color-regular);
+  --fe-button-disabled-text-color: var(--fe-disabled-text-color);
+  --fe-button-disabled-bg-color: var(--fe-fill-color-blank);
+  --fe-button-disabled-border-color: var(--fe-border-color-light);
+  --fe-button-hover-text-color: var(--fe-color-primary);
+  --fe-button-hover-bg-color: var(--fe-color-primary-light-9);
+  --fe-button-hover-border-color: var(--fe-color-primary-light-7);
+  --fe-button-active-text-color: var(--fe-button-hover-text-color);
+  --fe-button-active-border-color: var(--fe-color-primary);
+  --fe-button-active-bg-color: var(--fe-button-hover-bg-color);
+  --fe-button-outline-color: var(--fe-color-primary-light-5);
+  --fe-button-active-color: var(--fe-text-color-primary);
+}
+
+.fe-button {
+  appearance: none;
+  background-color: var(--fe-button-bg-color);
+  border: var(--fe-border);
+  border-radius: var(--fe-border-radius-base);
+  box-sizing: border-box;
+  color: var(--fe-button-text-color);
+  cursor: pointer;
+  display: inline-block;
+  font-size: var(--fe-font-size-base);
+  font-weight: var(--fe-button-font-weight);
+  height: 40px;
+  line-height: 1;
+  margin: 0;
+  outline: none;
+  padding: 12px 20px;
+  text-align: center;
+  transition: 0.1s;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+
+  &:hover,
+  &-focus {
+    color: var(--fe-button-hover-text-color);
+    border-color: var(--fe-button-hover-border-color);
+    background-color: var(--fe-button-hover-bg-color);
+    outline: none;
+  }
+
+  &:active {
+    color: var(--fe-button-active-text-color);
+    border-color: var(--fe-button-active-border-color);
+    background-color: var(--fe-button-active-bg-color);
+    outline: none;
+  }
+
+  &.is-round {
+    border-radius: var(--fe-border-radius-round);
+  }
+
+  &.is-circle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &.is-disabled,
+  &.is-disabled:hover,
+  &.is-disabled:focus,
+  &[disabled],
+  &[disabled]:hover,
+  &[disabled]:focus {
+    color: var(--fe-button-disabled-text-color);
+    cursor: not-allowed;
+    background-image: none;
+    background-color: var(--fe-button-disabled-bg-color);
+    border-color: var(--fe-button-disabled-border-color);
+  }
+
+  [class*="fe-icon"] + span {
+    margin-left: 6px;
+    position: relative;
+    bottom: 2px;
+  }
+}
+
+@each $val in primary, info, success, warning, danger {
+  .fe-button--#{$val} {
+    --fe-button-text-color: var(--fe-color-white);
+    --fe-button-bg-color: var(--fe-color-#{$val});
+    --fe-button-border-color: var(--fe-color-#{$val});
+    --fe-button-outline-color: var(--fe-color-#{$val}-light-5);
+    --fe-button-active-color: var(--fe-color-#{$val}-dark-2);
+    --fe-button-hover-text-color: var(--fe-color-white);
+    --fe-button-hover-bg-color: var(--fe-color-#{$val}-light-3);
+    --fe-button-hover-border-color: var(--fe-color-#{$val}-light-3);
+    --fe-button-active-bg-color: var(--fe-color-#{$val}-dark-2);
+    --fe-button-active-border-color: var(--fe-color-#{$val}-dark-2);
+    --fe-button-disabled-text-color: var(--fe-color-white);
+    --fe-button-disabled-bg-color: var(--fe-color-#{$val}-light-5);
+    --fe-button-disabled-border-color: var(--fe-color-#{$val}-light-5);
+  }
+
+  .fe-button--#{$val}.is_plain {
+    --fe-button-text-color: var(--fe-color-#{$val});
+    --fe-button-bg-color: var(--fe-color-#{$val}-light-9);
+    --fe-button-border-color: var(--fe-color-#{$val}-light-5);
+    --fe-button-hover-text-color: var(--fe-color-white);
+    --fe-button-hover-bg-color: var(--fe-color-#{$val});
+    --fe-button-hover-border-color: var(--fe-color-#{$val});
+    --fe-button-active-text-color: var(--fe-color-white);
+  }
+}
+
+.fe-button--large {
+  --fe-button-size: 50px;
+  height: var(--fe-button-size);
+  padding: 12px 19px;
+  font-size: var(--fe-font-size-base);
+  border-radius: var(--fe-border-radius-base);
+}
+
+.fe-button--small {
+  --fe-button-size: 24px;
+  height: var(--fe-button-size);
+  padding: 5px 11px;
+  font-size: 12px;
+  border-radius: calc(var(--fe-border-radius-base) - 1px);
+}
