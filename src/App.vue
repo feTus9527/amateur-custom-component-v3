@@ -2,18 +2,20 @@
 
 <template>
   <h1 class="title">Custom Component for Vue3.x</h1>
-  <nav class="nav">
-    <router-link to="/">Icon</router-link>
-    <router-link to="/button">Button</router-link>
-    <router-link to="/card">Card</router-link>
-    <router-link to="/dialog">Dialog</router-link>
-    <router-link to="/paper">Paper</router-link>
-    <router-link to="/collapse">Collapse</router-link>
-    <router-link to="/tooltip">Tooltip</router-link>
-    <router-link to="/dropdown">Dropdown</router-link>
-  </nav>
-  <div class="content">
-    <router-view></router-view>
+  <div class="content-container">
+    <nav class="nav">
+      <router-link to="/">Icon</router-link>
+      <router-link to="/button">Button</router-link>
+      <router-link to="/card">Card</router-link>
+      <router-link to="/dialog">Dialog</router-link>
+      <router-link to="/paper">Paper</router-link>
+      <router-link to="/collapse">Collapse</router-link>
+      <router-link to="/tooltip">Tooltip</router-link>
+      <router-link to="/dropdown">Dropdown</router-link>
+    </nav>
+    <div class="content">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -21,16 +23,25 @@
 .title {
   font-weight: 200;
 }
-
-.nav {
+.content-container {
   display: flex;
-  height: 50px;
-  align-items: center;
-  justify-content: space-evenly;
-}
+  gap: 1rem;
 
-.content {
-  margin-top: 2em;
+  .nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1.5rem;
+  }
+
+  .content {
+    flex-grow: 1;
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 .active {

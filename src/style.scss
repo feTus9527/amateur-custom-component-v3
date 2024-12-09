@@ -8,19 +8,21 @@ body {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  letter-spacing: .10em;
+  letter-spacing: 0.1em;
 }
 
 .row {
-  width: 800px;
+  width: 1000px;
   display: flex;
   justify-content: space-evenly;
-  align-items: flex-start;
-  margin: 20px auto 30px;
+  align-items: center;
+  margin: 20px auto;
 }
 
 .row-title {
+  text-align: left;
+  width: 900px;
+  margin: 10px auto;
   font-weight: 200;
-  text-align: center;
   user-select: none;
 }

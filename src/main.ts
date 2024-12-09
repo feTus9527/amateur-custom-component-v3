@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import router from "@/routes";
-import "./style.css";
+import "./style.scss";
 import "@/assets/styles/index.scss";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
