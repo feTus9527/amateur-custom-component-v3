@@ -1,0 +1,85 @@
+@use "sass:color";
+
+$colors: (
+  primary: #409eff,
+  success: #67c23a,
+  warning: #e6a23c,
+  danger: #f56c6c,
+  info: #909399,
+);
+
+:root {
+  // main & secondary color vars
+  @each $value, $color in $colors {
+    --fe-color-#{$value}: #{$color};
+    @for $i from 1 through 4 {
+      --fe-color-#{$value}-light-#{2 * $i + 1}: #{color.mix(
+          #fff,
+          $color,
+          (2 * $i + 1) * 10 * 1%
+        )};
+    }
+    --fe-color-#{$value}-light-8: #{color.mix(#fff, $color, 80%)};
+    --fe-color-#{$value}-dark-2: #{color.mix(#000, $color, 20%)};
+  }
+
+  // neutral color vars
+  --fe-color-white: #fff;
+  --fe-color-black: #000;
+
+  --fe-bg-color: #fff;
+  --fe-bg-color-page: #f2f3f5;
+  --fe-bg-color-page-overlay: #fff;
+
+  --fe-text-color-primary: #303133;
+  --fe-text-color-regular: #606266;
+  --fe-text-color-secondary: #909399;
+  --fe-text-color-placeholder: #a8abb2;
+  --fe-text-color-disabled: #c0c4cc;
+
+  --fe-border-color: #dcdfe6;
+  --fe-border-color-light: #e4e7ed;
+  --fe-border-color-lighter: #ebeef5;
+  --fe-border-color-extra-light: #f2f6fc;
+  --fe-border-color-dark: #d4d7de;
+  --fe-border-color-darker: #cdd0d6;
+
+  --fe-fill-color: #f0f2f5;
+  --fe-fill-color-light: #f5f7fa;
+  --fe-fill-color-lighter: #fafafa;
+  --fe-fill-color-extra-light: #fafcff;
+  --fe-fill-color-dark: #ebedf0;
+  --fe-fill-color-darker: #e6e8eb;
+  --fe-fill-color-blank: #ffffff;
+
+  // border vars
+  --fe-border-width: 1px;
+  --fe-border-style: solid;
+  --fe-border-color-hover: var(--fe-text-color-disabled);
+  --fe-border: var(--fe-border-width) var(--fe-border-style)
+    var(--fe-border-color);
+  --fe-border-radius-small: 2px;
+  --fe-border-radius-base: 4px;
+  --fe-border-radius-round: 20px;
+  --fe-border-radius-circle: 100%;
+
+  // font vars
+  --fe-font-size-extra-large: 20px;
+  --fe-font-size-large: 18px;
+  --fe-font-size-medium: 16px;
+  --fe-font-size-base: 14px;
+  --fe-font-size-small: 13px;
+  --fe-font-size-extra-small: 12px;
+  --fe-font-family: "Helvetica Neue", Helvetica, "PingFangSC",
+    "Miragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+  --fe-font-weight-primary: 500;
+
+  // disabled vars
+  --fe-disabled-bg-color: var(--fe-fill-color-light);
+  --fe-disabled-text-color: var(--fe-text-color-placeholder);
+  --fe-disabled-border-color: var(--fe-border-color-light);
+
+  // transition vars
+  --fe-transition-duration: 0.3s;
+  --fe-transition-duration-fast: 0.2s;
+}

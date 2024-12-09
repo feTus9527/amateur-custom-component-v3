@@ -1,0 +1,15 @@
+.fe-icon {
+  --fe-icon-color: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+  color: var(--fe-icon-color);
+  font-size: inherit;
+}
+
+@each $val in primary, info, success, warning, danger {
+  .fe-icon--#{$val} {
+    --fe-icon-color: var(--fe-color-#{$val});
+  }
+}
