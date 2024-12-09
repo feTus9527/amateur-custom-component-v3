@@ -10,6 +10,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 
 import Icon from "@/components/icon/index.vue";
 import Button from "@/components/button/index.vue";
+import Card from "@/components/card/index.vue";
 
 library.add(fas);
 
@@ -17,6 +18,7 @@ const app = createApp(App);
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.component("fe-icon", Icon);
 app.component("fe-button", Button);
+app.component("fe-card", Card);
 
 app.use(router);
 app.mount("#app");

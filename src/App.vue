@@ -32,6 +32,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     gap: 1.5rem;
+    letter-spacing: 0.05em;
   }
 
   .content {
