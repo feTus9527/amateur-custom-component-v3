@@ -1,4 +1,4 @@
-# amateur-custom-component-vue3
+# amateur-custom-component-v3
 
 A basic attempt of custom component construction. For Vue 3.x, with TypeScript.
 
@@ -13,7 +13,7 @@ pnpm install
 ## Directory Tree
 
 ```text
-amateur-custom-component-vue3/
+amateur-custom-component-v3/
 ├── .gitignore
 ├── LICENSE
 ├── package.json
