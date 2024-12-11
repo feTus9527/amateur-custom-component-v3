@@ -28,8 +28,8 @@ const visible3 = ref(false);
   <fe-dialog v-model:visible="visible3" @close="visible3 = false">
     This is a basic dialog.
     <template #footer>
-      <fe-button @click="visible3 = false">取消</fe-button>
-      <fe-button type="primary" @click="visible3 = false">确定</fe-button>
+      <fe-button @click="visible3 = false">Cancel</fe-button>
+      <fe-button type="primary" @click="visible3 = false">Confirm</fe-button>
     </template>
   </fe-dialog>
 </template>
