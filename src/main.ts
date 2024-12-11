@@ -12,6 +12,7 @@ import Icon from "@/components/icon/index.vue";
 import Button from "@/components/button/index.vue";
 import Card from "@/components/card/index.vue";
 import Dialog from "@/components/dialog/index.vue";
+import Pager from "@/components/pager/index.vue";
 
 library.add(fas);
 
@@ -21,6 +22,7 @@ app.component("fe-icon", Icon);
 app.component("fe-button", Button);
 app.component("fe-card", Card);
 app.component("fe-dialog", Dialog);
+app.component("fe-pager", Pager);
 
 app.use(router);
 app.mount("#app");

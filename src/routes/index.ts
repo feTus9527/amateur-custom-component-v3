@@ -40,9 +40,9 @@ const router = createRouter({
       component: () => import("@/pages/tooltip/index.vue"),
     },
     {
-      path: "/paper",
-      name: "paper",
-      component: () => import("@/pages/paper/index.vue"),
+      path: "/pager",
+      name: "pager",
+      component: () => import("@/pages/pager/index.vue"),
     },
   ],
   linkActiveClass: "active",

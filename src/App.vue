@@ -8,7 +8,7 @@
       <router-link to="/button">Button</router-link>
       <router-link to="/card">Card</router-link>
       <router-link to="/dialog">Dialog</router-link>
-      <router-link to="/paper">Paper</router-link>
+      <router-link to="/pager">Pager</router-link>
       <router-link to="/collapse">Collapse</router-link>
       <router-link to="/tooltip">Tooltip</router-link>
       <router-link to="/dropdown">Dropdown</router-link>

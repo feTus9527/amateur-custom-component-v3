@@ -1,0 +1,58 @@
+.fe-pager {
+  --fe-pager-theme-color: var(--fe-color-primary);
+  --fe-pager-size: 34px;
+  --fe-pager-padding: 0 12px;
+  --fe-pager-font-size: var(--fe-font-size-base);
+}
+
+.fe-pager {
+  text-align: center;
+
+  a {
+    border: 1px solid #e1e2e3;
+    background-color: #f0f2f5;
+    color: #303133;
+    height: var(--fe-pager-size);
+    display: inline-block;
+    line-height: var(--fe-pager-size);
+    border-radius: 2px;
+    padding: var(--fe-pager-padding);
+    margin: 8px;
+    font-size: var(--fe-pager-font-size);
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: var(--fe-pager-theme-color);
+    }
+
+    &.active {
+      color: #fff;
+      background-color: var(--fe-pager-theme-color);
+      border-color: var(--fe-pager-theme-color);
+    }
+
+    &.disabled {
+      color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+@each $val in primary, success, warning, info, danger {
+  .fe-pager--#{$val} {
+    --fe-pager-theme-color: var(--fe-color-#{$val});
+  }
+}
+
+.fe-pager--small {
+  --fe-pager-size: 25px;
+  --fe-pager-padding: 0 8px;
+  --fe-pager-font-size: var(--fe-font-size-small);
+}
+
+.fe-pager--large {
+  --fe-pager-size: 44px;
+  --fe-pager-padding: 0 16px;
+  --fe-pager-font-size: var(--fe-font-size-large);
+}
